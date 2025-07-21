@@ -54,7 +54,6 @@ public class StockService {
         return stockRepository.save(stock);
     }
 
-
     public void delete(Long id) {
         stockRepository.deleteById(id);
     }
@@ -83,3 +82,4 @@ public class StockService {
         stockRepository.saveAll(List.of(srcStock, destStock));
     }
 }
+
