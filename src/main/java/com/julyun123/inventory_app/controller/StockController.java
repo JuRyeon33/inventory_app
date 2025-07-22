@@ -1,6 +1,7 @@
 package com.julyun123.inventory_app.controller;
 
 import com.julyun123.inventory_app.dto.StockDto;
+import com.julyun123.inventory_app.dto.StockResponseDto;
 import com.julyun123.inventory_app.dto.StockUpdateDto;
 import com.julyun123.inventory_app.model.Stock;
 import com.julyun123.inventory_app.query.StockSearchCondition;
@@ -18,8 +19,8 @@ public class StockController {
     private final StockService stockService;
 
     @GetMapping
-    public List<Stock> search(StockSearchCondition condition) {
-        return stockService.search(condition);
+    public List<StockResponseDto> search(StockSearchCondition cond) {
+        return stockService.search(cond);
     }
 
     @GetMapping("/{id}")
